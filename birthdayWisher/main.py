@@ -7,8 +7,8 @@ import random
 current_month = datetime.now().month
 current_day = datetime.now().day
 
-my_email = 'gilfoylethegoldfoil@gmail.com'
-password = 'testermail12!'
+my_email = '*******************@gmail.com'
+password = '**************'
 
 data = pandas.read_csv("birthdays.csv")
 birthday_dict = data.to_dict(orient='records')
@@ -18,7 +18,7 @@ for birthday in birthday_dict:
     if birthday['month'] == current_month and birthday['day'] == current_day:
         birthday_person = birthday['name']
         birthday_mail = birthday['email']
-        letters = os.listdir("C:/Users/REYNA ROYCE/Desktop/birthdayWisher/letter_templates")
+        letters = os.listdir(<absolute file path>)
         random_letter = random.choice(letters)
 
         with open(f"./letter_templates/{random_letter}") as greetings:
